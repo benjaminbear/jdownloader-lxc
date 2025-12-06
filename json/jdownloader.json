@@ -1,0 +1,53 @@
+{
+  "name": "JDownloader",
+  "slug": "jdownloader",
+  "categories": [
+    8
+  ],
+  "date_created": "2025-12-06",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": null,
+  "documentation": "https://jdownloader.org/knowledge/wiki/start",
+  "website": "https://jdownloader.org/",
+  "logo": "https://jdownloader.org/favicon.ico",
+  "config_path": "/opt/JDownloader/cfg",
+  "description": "JDownloader2 is a free, open-source download management tool with Proton VPN CLI pre-installed for secure and private downloading. Supports MyJDownloader for remote management.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/jdownloader.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 2048,
+        "hdd": 8,
+        "os": "Debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "JDownloader runs in headless mode. Use MyJDownloader (https://my.jdownloader.org) to manage downloads remotely.",
+      "type": "info"
+    },
+    {
+      "text": "Proton VPN requires manual login after container creation. Run: protonvpn-cli login <username>",
+      "type": "warning"
+    },
+    {
+      "text": "Downloads are stored in /downloads by default.",
+      "type": "info"
+    },
+    {
+      "text": "Enable kill switch with: protonvpn-cli ks --on",
+      "type": "info"
+    }
+  ]
+}
+
